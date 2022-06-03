@@ -3,6 +3,7 @@ import heapq  # implementation of the heap queue algorithm standard library modu
 
 def heap_knapsack(capacity, items):
     order = [(-v / w, w) for v, w in items]  # get list of value of weight and weight pairs
+    # note that we add - sign to invert heap
     heapq.heapify(order)  # make binary heap out of order
 
     acc = 0  # our accumulated value
